@@ -15,12 +15,22 @@ const setUsers = asyncHandler ( async (req, res) => {
         res.status(400);
         throw new Error("Please add a text field");
     }
-    const user = await User.create({
-        userName: req.body.userName,
-        hash: req.body.password,
-    })
-    
-    res.status(200).json(user);
+    let newUser = new User();
+    newUser.name = req.body.name;
+    newUser.password = req.body.password;
+    newUser.setPassword(req.body.password);
+    newUser.save((err, User) => { 
+        if (err) { 
+            return res.status(400).send({ 
+                message : "Failed to add user."
+            }); 
+        } 
+        else { 
+            return res.status(201).send({ 
+                message : "User added successfully."
+            }); 
+        } 
+    });
 });
 
 //@desc Update users
