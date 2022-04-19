@@ -16,12 +16,28 @@
             <div class="app_content_wrapper">
                 <div class="app_logo_wrapper"></div>
                 <div class="app_menu_wrapper">
-                    <div class="chose_app_wrapper"></div>
-                    <div class="data_app_wrapper"></div>
+                    <div class="chose_app_wrapper">
+
+                    </div>
+                    <div class="data_app_wrapper">
+                        <div class="register_name">
+                            <h2>Register here</h2>
+                        </div>
+                        <div class="form_wrapper">
+                            <form action="http://localhost:5000/api/users/" class="login_form" id="loginForm" name="loginForm" >
+                                <label for="username">Username</label>
+                                <input type="text" name="username" id="username"/> <br><br>
+                                <label for="password">Password</label>
+                                <input type="text" name="password" id="password"/><br><br>
+                                <button type="submit" value="Submit" id="submit_button">Submit</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
                 <div class="app_footer_wrapper"></div>
             </div>
         </div>
     </section>
+    <script src="/frontend/app.js"></script>
 </body>
 </html>

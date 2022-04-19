@@ -16,7 +16,7 @@ const setUsers = asyncHandler ( async (req, res) => {
         throw new Error("Please add a text field");
     }
     let newUser = new User();
-    newUser.name = req.body.name;
+    newUser.username = req.body.username;
     newUser.password = req.body.password;
     newUser.setPassword(req.body.password);
     newUser.save((err, User) => { 
