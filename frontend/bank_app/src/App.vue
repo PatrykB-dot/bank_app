@@ -8,6 +8,8 @@
                 <div class="app_logo_wrapper"></div>
                 <div class="app_menu_wrapper">
                     <div class="chose_app_wrapper">
+                        <div class="to_register"><p>Login</p></div>
+                        <div class="to_login">Register</div>
                     </div>
                     <div class="data_app_wrapper">
                         <div class="register_name">
@@ -113,6 +115,11 @@ input {
 .chose_app_wrapper {
     width: 30%;
     height: 100%;
+    border-right: 2px solid white;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 .data_app_wrapper {
     width: 70%;
@@ -134,9 +141,6 @@ button {
     color:white;
     cursor: pointer;
     letter-spacing: 1px;
-}
-.register_name {
-    margin-bottom:20px;
 }
 </style>
 
