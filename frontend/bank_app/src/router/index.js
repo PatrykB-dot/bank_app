@@ -5,11 +5,14 @@ import homeComponent from '../views/Home.vue'
 const routes = [{
     path: '/',
     name: 'Home',
-    component: homeComponent
-},{
-    path: '/register',
-    name: 'register',
-    component: registerComponent
+    component: homeComponent,
+    children: [
+        {
+            path: '/register',
+            name: 'register',
+            component: registerComponent
+        }
+    ]
 }]
 const router = createRouter({
     history: createWebHistory(),
