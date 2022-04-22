@@ -1,4 +1,5 @@
 <template>
+
  <div class="form_wrapper">
     <FormKit
       type="text"
@@ -12,7 +13,7 @@
       v-model="password"
       label="Password"
       />
-      <FormKit type="submit" label="Sign up" />
+      <FormKit type="submit" label="Sign up" class="submit_button" />
    </div>
 </template>
 
@@ -30,5 +31,8 @@ export default {
   justify-content: space-evenly;
   align-items: center;
   height: 50%;
+}
+button {
+  padding: 10px;
 }
 </style>

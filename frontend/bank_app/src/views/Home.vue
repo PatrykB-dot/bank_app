@@ -8,13 +8,26 @@
                 <div class="app_logo_wrapper"></div>
                 <div class="app_menu_wrapper">
                     <div class="chose_app_wrapper">
-                        <router-link to="/register">Register</router-link>
-                        <router-view/>
+                            <div class="nav_link_wrapper">
+                            <router-link class="nav-link" to="/">Home</router-link>
+                            </div>
+                            <div class="nav_link_wrapper">
+                            
+                            </div>
                     </div>
                     <div class="data_app_wrapper">
-                        <div class="register_name">
-                            <h2>Register here</h2>
+                        <div class="welcome_wrapper">
+                            <div>
+                                <h1>Welcome !</h1>
+                            </div>
+                            <div>
+                            <p>Already user?</p><br>
+                            <p>Log in</p><br>
+                            <p>Dont have account?</p><br>
+                            <router-link class="nav-link" to="/register">Register</router-link>
+                            </div>
                         </div>
+                        <router-view/>
                     </div>
                 </div>
                 <div class="app_footer_wrapper"></div>
@@ -31,13 +44,16 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 html {
     box-sizing: border-box;
+    font-family: "Open Sans";
   }
 *, *:before, *:after {
     box-sizing: inherit;
     margin:0;
     padding:0;
+    font-family: 'Open Sans';
 }
 /* main blured background */
 .main_section {
@@ -104,6 +120,12 @@ html {
 .chose_app_wrapper {
     width: 30%;
     height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    font-size:1.2rem;
+    border-right: 2px solid white;
 }
 .data_app_wrapper {
     width: 70%;
@@ -120,5 +142,26 @@ html {
 
 .register_name {
     margin-bottom:20px;
+}
+.nav-link {
+    text-decoration: none;
+    color:white;
+}
+.nav_link_wrapper {
+    margin-bottom: 20px;
+    border-bottom: 2px solid white;
+}
+button {
+    padding:5px 10px;
+    border-radius: 8px;
+    background-color: #555555;
+    color:white;
+}
+.welcome_wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50%;
 }
 </style>
